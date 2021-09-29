@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -11,7 +12,12 @@ public class CounterMain {
             threadOne.start();
         }
         for (Thread thread : threadList) {
-            thread.join();
+            try {
+                thread.join();
+
+            } catch (InterruptedException e ) {
+                e.printStackTrace();
+            }
         }
 
         System.out.println(count.getCounter());
