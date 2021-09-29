@@ -10,6 +10,7 @@ public class CounterMain {
         for (int i = 0; i < 100; i++) {
             Thread threadOne = new Thread(new CounterRunnable(1000000, count));
             threadOne.start();
+            threadList.add(threadOne);
         }
         for (Thread thread : threadList) {
             try {
