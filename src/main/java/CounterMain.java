@@ -21,6 +21,6 @@ public class CounterMain {
             }
         }
 
-        System.out.println(count.getCounter());
+        System.out.println("El resultado es: " + count.getCounter());
     }
 }
