@@ -5,7 +5,7 @@ public class Counter {
         this.counter = 0;
     }
 
-    private void ink() {
+    public void ink() {
         counter++;
     }
 
